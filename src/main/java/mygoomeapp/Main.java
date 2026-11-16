@@ -9,7 +9,7 @@ public class Main {
 
     static int clicks;
     static double volume = 0.5;
-    static boolean overlay;
+    static boolean overlay, shown;
     static Window win;
 
     static Goome openMode(boolean ov) {
@@ -24,7 +24,10 @@ public class Main {
     static void contents(Ui ui) {
         overlay = ui.toggle("Overlay mode", overlay);
         ui.separator();
+        ui.pushColor(Style.TEXT, ui.animColor("hello", shown ? 0xFFF2F4F8 : 0x00F2F4F8, 600, Theme.EASE_OUT));
         ui.heading("Hello from " + APP_NAME);
+        ui.pop();
+        shown = true;
         if (ui.button("Click me")) clicks++;
         ui.label("clicked " + clicks + " times");
         volume = ui.slider("Volume", volume, 0, 1, "%.2f");
