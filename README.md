@@ -59,7 +59,7 @@ It swaps "My Goome App" and friends for your name everywhere, files too, and lea
 <br>
 
 <p align="center">
-You need a JDK 22 or newer, goome talks to its C library with FFM. Gradle downloads itself and gets <code>goome-x.y.z.jar</code> straight from the <a href="https://github.com/goome-ui/java-goome/releases">java-goome releases</a>, with the native lib for every OS inside.
+You need a JDK 22 or newer, goome talks to its C library with FFM. Gradle downloads itself and gets goome from <a href="https://central.sonatype.com/artifact/io.github.goome-ui/goome">Maven Central</a> (<code>io.github.goome-ui:goome</code>), with the native lib for every OS inside.
 </p>
 
 ```sh

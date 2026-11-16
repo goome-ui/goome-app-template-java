@@ -4,18 +4,6 @@ plugins {
 
 repositories {
     mavenCentral()
-    ivy {
-        url = 'https://github.com/goome-ui/java-goome/releases/download/'
-        patternLayout {
-            artifact 'v[revision]/[module]-[revision].[ext]'
-        }
-        metadataSources {
-            artifact()
-        }
-        content {
-            includeGroup 'io.github.goome-ui'
-        }
-    }
 }
 
 dependencies {
